@@ -136,7 +136,6 @@ export type DepositAndGenerateData = {
 function getDepositAndGenerateCallData(data: DepositAndGenerateData, context: ContextConnected) {
   const { dssProxyActions, dssCdpManager, mcdJoinDai, mcdJug, joins, contract } = context
   const { id, token, depositAmount, generateAmount, ilk } = data
-
   if (depositAmount.gt(zero) && generateAmount.gt(zero)) {
     if (token === 'ETH') {
       return contract<DssProxyActions>(dssProxyActions).methods.lockETHAndDraw(

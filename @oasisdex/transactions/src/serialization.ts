@@ -31,7 +31,6 @@ export function deserializeTransactions<A extends TxMeta>(
 }
 
 export function serializeTransactions<A extends TxMeta>(transactions: TxState<A>[]): string {
-  console.log('serialize', transactions);
   return JSON.stringify(
     transactions.filter(
       (tx) =>

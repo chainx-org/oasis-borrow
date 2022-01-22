@@ -25,7 +25,8 @@ export function createPriceInfo$(
   oraclePriceData$: (token: string) => Observable<OraclePriceData>,
   token: string,
 ): Observable<PriceInfo> {
-  return combineLatest(oraclePriceData$(token), oraclePriceData$('ETH')).pipe(
+  console.log("token", token)
+  return combineLatest(oraclePriceData$(token), oraclePriceData$('WBTC')).pipe(
     switchMap(
       ([
         {

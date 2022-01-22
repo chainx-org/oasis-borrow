@@ -61,9 +61,7 @@ class TrezorSubprovider extends base_wallet_subprovider_1.BaseWalletSubprovider 
      */
     async getAccountsAsync(numberOfAccounts = DEFAULT_NUM_ADDRESSES_TO_FETCH) {
         const initialDerivedKeyInfo = await this._initialDerivedKeyInfoAsync();
-        console.log('initialDerivedKeyInfo', initialDerivedKeyInfo);
         const derivedKeyInfos = wallet_utils_1.walletUtils.calculateDerivedHDKeyInfos(initialDerivedKeyInfo, numberOfAccounts);
-        console.log('derivedKeyInfos', derivedKeyInfos);
         const accounts = _.map(derivedKeyInfos, (k) => k.address);
         return accounts;
     }
@@ -86,7 +84,6 @@ class TrezorSubprovider extends base_wallet_subprovider_1.BaseWalletSubprovider 
         const initialDerivedKeyInfo = await this._initialDerivedKeyInfoAsync();
         const derivedKeyInfo = this._findDerivedKeyInfoForAddress(initialDerivedKeyInfo, txData.from);
         const fullDerivationPath = derivedKeyInfo.derivationPath;
-        console.log('trezor fullDerivationPath', fullDerivationPath);
         const response = await this._trezorConnectClientApi.ethereumSignTransaction({
             path: fullDerivationPath,
             transaction: {

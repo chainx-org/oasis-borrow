@@ -33,7 +33,6 @@ function deserializeTransactions(serializedTransactions) {
 }
 exports.deserializeTransactions = deserializeTransactions;
 function serializeTransactions(transactions) {
-    console.log('serialize', transactions);
     return JSON.stringify(transactions.filter((tx) => tx.status !== types_1.TxStatus.CancelledByTheUser && tx.status !== types_1.TxStatus.WaitingForApproval));
 }
 exports.serializeTransactions = serializeTransactions;

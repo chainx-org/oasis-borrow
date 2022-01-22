@@ -206,14 +206,14 @@ const sherpax: NetworkConfig = {
   id: '1506',
   name: 'sherpax',
   label: 'sherpax',
-  infuraUrl: `http://localhost:8545`,
-  infuraUrlWS: `ws://localhost:9944`,
+  infuraUrl: `https://sherpax-testnet.chainx.org/rpc`,
+  infuraUrlWS: `wss://sherpax-testnet.chainx.org`,
   safeConfirmations: 6,
   otc: contractDesc(otc, '0x0000000000000000000000000000000000000000'),
   collaterals: getCollaterals(sherpaxAddressed),
   tokens: {
     ...getCollateralTokens(sherpaxAddressed),
-    WETH: contractDesc(eth, sherpaxAddressed.ETH),
+    WBTC: contractDesc(eth, sherpaxAddressed.WBTC),
     DAI: contractDesc(erc20, sherpaxAddressed.MCD_DAI),
   },
   joins: {
