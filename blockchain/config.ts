@@ -203,7 +203,7 @@ const goerli: NetworkConfig = {
 }
 
 const sherpax: NetworkConfig = {
-  id: '1506',
+  id: '1507',
   name: 'sherpax',
   label: 'sherpax',
   infuraUrl: `https://sherpax-testnet.chainx.org/rpc`,
@@ -233,13 +233,11 @@ const sherpax: NetworkConfig = {
   dsProxyRegistry: contractDesc(dsProxyRegistry, sherpaxAddressed.PROXY_REGISTRY),
   dsProxyFactory: contractDesc(dsProxyFactory, sherpaxAddressed.PROXY_FACTORY),
   dssProxyActions: contractDesc(dssProxyActions, sherpaxAddressed.PROXY_ACTIONS),
-  // Currently this is not supported on Goerli - no deployed contract
   dssMultiplyProxyActions: contractDesc(
     dssMultiplyProxyActions,
-    getConfig()?.publicRuntimeConfig?.multiplyProxyActions || '',
+    '0x4a133B0BB7346a371e26c9bC64aE834b46AAE3D9',
   ),
-  // Currently this is not supported on Goerli - no deployed contract
-  exchange: contractDesc(exchange, getConfig()?.publicRuntimeConfig?.exchangeAddress || ''),
+  exchange: contractDesc(exchange, '0xCa6bA5D1d0d06b1f5ec14559aF994D43581277f8'),
   // Currently this is not supported on Goerli - no deployed contract
   fmm: '0x1EB4CF3A948E7D72A198fe073cCb8C7a948cD853',
   etherscan: {
@@ -252,7 +250,7 @@ const sherpax: NetworkConfig = {
   magicLink: {
     apiKey: '',
   },
-  cacheApi: 'https://oazo-bcache-goerli-staging.new.oasis.app/api/v1',
+  cacheApi: '',
 }
 
 const hardhat: NetworkConfig = {

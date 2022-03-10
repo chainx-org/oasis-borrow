@@ -5,7 +5,7 @@ export const networkNameToId = {
   main: 1,
   goerli: 5,
   kovan: 42,
-  sherpax: 1506,
+  sherpax: 1507,
   hardhat: 2137,
 } as { [key: string]: number };
 

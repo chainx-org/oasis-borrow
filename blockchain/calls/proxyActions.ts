@@ -306,6 +306,7 @@ function getOpenMultiplyCallData(data: OpenMultiplyData, context: ContextConnect
     exchange,
     fmm,
   } = context
+  console.log("exchangeAddress",data.exchangeAddress)
 
   return contract<MultiplyProxyActions>(dssMultiplyProxyActions).methods.openMultiplyVault(
     {
