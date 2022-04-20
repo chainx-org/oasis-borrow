@@ -213,7 +213,8 @@ const sherpax: NetworkConfig = {
   collaterals: getCollaterals(sherpaxAddressed),
   tokens: {
     ...getCollateralTokens(sherpaxAddressed),
-    WBTC: contractDesc(eth, sherpaxAddressed.WBTC),
+    KSX: contractDesc(eth, sherpaxAddressed.KSX),
+    SBTC: contractDesc(erc20, sherpaxAddressed.SBTC),
     DAI: contractDesc(erc20, sherpaxAddressed.MCD_DAI),
   },
   joins: {

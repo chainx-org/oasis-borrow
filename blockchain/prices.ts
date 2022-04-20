@@ -32,7 +32,7 @@ export function createGasPrice$(
   )
 }
 
-const tradingTokens = ['DAI', 'ETH', 'WBTC']
+const tradingTokens = ['DAI', 'ETH']
 
 export const tokenPricesInUSD$: Observable<Ticker> = every10Seconds$.pipe(
   switchMap(() =>
@@ -108,6 +108,8 @@ export function createOraclePriceData$(
 ): Observable<OraclePriceData> {
   return context$.pipe(
     switchMap(({ web3, mcdOsms }) => {
+      console.log('mcd Osms:', mcdOsms)
+      console.log('token:', token)
       return bindNodeCallback(web3.eth.getCode)(mcdOsms[token].address).pipe(
         first(),
         switchMap((contractData) =>
