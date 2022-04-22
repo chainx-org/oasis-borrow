@@ -175,8 +175,8 @@ const tokens = [
   // },
   {
     symbol: 'USDT',
-    precision: 6,
-    digits: 2,
+    precision: 18,
+    digits: 18,
     name: 'Tether',
     icon: 'usdt',
     iconCircle: 'usdt_circle_color',
@@ -254,7 +254,7 @@ const tokens = [
   // },
   {
     symbol: 'USDC',
-    precision: 6,
+    precision: 18,
     digits: 6,
     digitsInstant: 2,
     maxSell: '1000000000000000',
@@ -270,8 +270,8 @@ const tokens = [
   },
   {
     symbol: 'PSMUSDC',
-    precision: 6,
-    digits: 6,
+    precision: 18,
+    digits: 18,
     digitsInstant: 2,
     maxSell: '1000000000000000',
     name: 'USD Coin',
@@ -286,8 +286,8 @@ const tokens = [
   },
   {
     symbol: 'PSMUSDT',
-    precision: 6,
-    digits: 6,
+    precision: 18,
+    digits: 18,
     digitsInstant: 2,
     maxSell: '1000000000000000',
     name: 'USD Coin',
@@ -302,8 +302,8 @@ const tokens = [
   },
   {
     symbol: 'PSMBUSD',
-    precision: 6,
-    digits: 6,
+    precision: 18,
+    digits: 18,
     digitsInstant: 2,
     maxSell: '1000000000000000',
     name: 'USD Coin',
@@ -318,8 +318,8 @@ const tokens = [
   },
   {
     symbol: 'BUSD',
-    precision: 6,
-    digits: 6,
+    precision: 18,
+    digits: 18,
     digitsInstant: 2,
     maxSell: '1000000000000000',
     name: 'USD Coin',
